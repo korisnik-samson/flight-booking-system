@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useContext } from "react";
 import { Container, Row, Button } from "reactstrap";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
-import { logo } from "../../assets/images";
+import { logo01 } from "../../assets/images";
 import { nav_links } from "../../constants";
 import "./header.css";
 
@@ -43,7 +43,7 @@ const Header = () => {
                 <Row>
                     <div className="nav__wrapper d-flex align-items-center justify-content-between">
                         <div className="logo">
-                            <img src={logo} alt=""/>
+                            <img src={logo01} alt=""/>
                         </div>
 
                         <div className="navigation" ref={menuRef} onClick={toggleMenu}>
