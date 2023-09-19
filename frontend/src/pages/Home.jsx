@@ -77,10 +77,7 @@ const Home = () => {
                         <Col lg="6">
                             <div className="experience__content">
                                 <Subtitle subtitle={"Experience"}/>
-
-                                <h2>
-                                    With our all experience <br/> we will serve you
-                                </h2>
+                                <h2>With our all experience <br/> we will serve you</h2>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     <br/>
@@ -117,7 +114,7 @@ const Home = () => {
                     <Row>
                         <Col lg="12">
                             <Subtitle subtitle={"Fans Love"}/>
-                            <h2 className="testimonial__title">What our fans say about us</h2>
+                            <h2 className="testimonial__title">What our customers say about us</h2>
                         </Col>
                         <Col lg="12">
                             <Testimonials/>

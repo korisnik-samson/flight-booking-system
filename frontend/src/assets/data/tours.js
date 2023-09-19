@@ -6,10 +6,11 @@ import tourImg05 from "../images/tour-img05.jpg";
 import tourImg06 from "../images/tour-img06.jpg";
 import tourImg07 from "../images/tour-img07.jpg";
 
+
 const tours = [
     {
         id: "01",
-        title: "Westminister Bridge",
+        title: "Westminster Bridge",
         city: "London",
         distance: 300,
         price: 99,

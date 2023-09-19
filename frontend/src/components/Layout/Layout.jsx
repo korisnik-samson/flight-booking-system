@@ -5,13 +5,13 @@ import Routers from "../../router/Routers";
 import Footer from "./../Footer/Footer";
 
 const Layout = () => {
-  return (
-    <>
-      <Header />
-      <Routers />
-      <Footer />
-    </>
-  );
+    return (
+        <React.Fragment>
+            <Header/>
+            <Routers/>
+            <Footer/>
+        </React.Fragment>
+    );
 };
 
 export default Layout;
