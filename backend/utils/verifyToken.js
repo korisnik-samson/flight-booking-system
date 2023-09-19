@@ -31,8 +31,6 @@ const authenticate = role => async (req, res, next) => {
     }
 };
 
-// Middleware to authenticate admin access
 export const adminAuth = authenticate("admin");
 
-// Middleware to authenticate patient access
 export const userAuth = authenticate("user");

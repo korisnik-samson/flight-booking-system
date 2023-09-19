@@ -2,7 +2,7 @@ import express from "express";
 import { createTour, deleteTour, getAllTour, getFeaturedTour, getSingleTour, getTourBySearch, getTourCount, updateTour
 } from "./../controllers/tourController.js";
 
-import {adminAuth} from "./../utils/verifyToken.js";
+import { adminAuth } from "./../utils/verifyToken.js";
 
 const router = express.Router();
 

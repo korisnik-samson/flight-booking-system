@@ -17,6 +17,7 @@ const corsOptions = { origin: "*" };
 
 // database connection
 mongoose.set("strictQuery", false);
+
 const connect = async (uri, callback) => {
     try {
         await mongoose.connect(process.env.MONGO_URI, {
