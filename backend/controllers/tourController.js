@@ -14,7 +14,7 @@ export const createTour = async (req, res) => {
     } catch (err) {
         res
             .status(500)
-            .json({success: false, message: "Failed to create. Try again"});
+            .json({ success: false, message: "Failed to create. Try again" });
     }
 };
 
@@ -24,10 +24,8 @@ export const updateTour = async (req, res) => {
     try {
         const updatedTour = await Tour.findByIdAndUpdate(
             id,
-            {
-                $set: req.body,
-            },
-            {new: true}
+            { $set: req.body },
+            { new: true }
         );
 
         res.status(200).json({
@@ -35,10 +33,11 @@ export const updateTour = async (req, res) => {
             message: "Successfully updated",
             data: updatedTour,
         });
+
     } catch (err) {
         res.status(500).json({
             success: false,
-            message: "failed to update",
+            message: `failed to update: ${err.message}`,
         });
     }
 };
@@ -53,10 +52,11 @@ export const deleteTour = async (req, res) => {
             success: true,
             message: "Successfully deleted",
         });
+
     } catch (err) {
         res.status(500).json({
             success: false,
-            message: "failed to delete",
+            message: `failed to delete: ${err.message}`,
         });
     }
 };
@@ -72,10 +72,11 @@ export const getSingleTour = async (req, res) => {
             message: "Successful",
             data: tour,
         });
+
     } catch (err) {
         res.status(404).json({
             success: false,
-            message: "not found",
+            message: `not found: ${err.message}`,
         });
     }
 };
@@ -95,10 +96,11 @@ export const getAllTour = async (req, res) => {
             message: "Successful",
             data: tours,
         });
+
     } catch (err) {
         res.status(404).json({
             success: false,
-            message: "not found",
+            message: `not found: ${err.message}`,
         });
     }
 };
@@ -119,10 +121,11 @@ export const getTourBySearch = async (req, res) => {
             message: "Successful",
             data: tours,
         });
+
     } catch (err) {
         res.status(404).json({
             success: false,
-            message: "not found",
+            message: `not found: ${err.message}`,
         });
     }
 };
@@ -141,7 +144,7 @@ export const getFeaturedTour = async (req, res) => {
     } catch (err) {
         res.status(404).json({
             success: false,
-            message: "not found",
+            message: `not found: ${err.message}`,
         });
     }
 };
