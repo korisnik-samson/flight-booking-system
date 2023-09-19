@@ -15,7 +15,7 @@ const Header = () => {
     const {user, dispatch} = useContext(AuthContext);
 
     const logout = () => {
-        dispatch({type: "LOGOUT"});
+        dispatch({ type: "LOGOUT" });
         navigate("/");
     };
 
@@ -41,7 +41,7 @@ const Header = () => {
         <header className="header" ref={headerRef}>
             <Container>
                 <Row>
-                    <div className="nav__wrapper d-flex align-items-center justify-content-between">
+                    <div className="d-flex align-items-center justify-content-between">
                         <div className="logo">
                             <img src={logo01} alt=""/>
                         </div>
@@ -53,8 +53,7 @@ const Header = () => {
                                         <NavLink
                                             to={item.path}
                                             className={navClass =>
-                                                navClass.isActive ? "active__link" : ""
-                                            }
+                                                navClass.isActive ? "active__link" : ""}
                                         >
                                             {item.display}
                                         </NavLink>

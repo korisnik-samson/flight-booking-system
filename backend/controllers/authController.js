@@ -2,7 +2,6 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-// user registration
 export const register = async (req, res) => {
     try {
         // hashing password
@@ -25,14 +24,12 @@ export const register = async (req, res) => {
     }
 };
 
-// user login
 export const login = async (req, res) => {
     const email = req.body.email;
 
     try {
         const user = await User.findOne({email});
 
-        // if user doesn't exist
         if (!user) {
             return res
                 .status(404)
@@ -45,7 +42,6 @@ export const login = async (req, res) => {
             user.password
         );
 
-        // if password is incorrect
         if (!checkCorrectPassword) {
             return res
                 .status(401)
@@ -56,9 +52,9 @@ export const login = async (req, res) => {
 
         // create jwt token
         const token = jwt.sign(
-            {id: user._id, role: user.role},
+            { id: user._id, role: user.role },
             process.env.JWT_SECRET_KEY,
-            {expiresIn: "15d"}
+            { expiresIn: "15d" }
         );
 
         // set token in the browser cookies and send the response to the client
